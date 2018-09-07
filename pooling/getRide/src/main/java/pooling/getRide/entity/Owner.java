@@ -1,5 +1,6 @@
 package pooling.getRide.entity;
 import javax.persistence.*;
+import  java.util.Date;
 
 @Entity
 @Table(name = "Owners")
@@ -21,6 +22,10 @@ public class Owner {
     private float rating;
     @Column (name = "ride_count")
     private int rideCount;
+    @Column (name="dl_no")
+    private String dlNo;
+    @Column (name="dl_valid_from")
+    private Date dlValidFrom;
 
     public int getRideCount() {
         return rideCount;
@@ -76,5 +81,12 @@ public class Owner {
 
     public void setRating(float rating) {
         this.rating = rating;
+    }
+    public String getDlNo() {
+        return dlNo;
+    }
+
+    public void setDlNo(String dlNo) {
+        this.dlNo = dlNo;
     }
 }
